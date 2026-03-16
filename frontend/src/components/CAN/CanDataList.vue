@@ -113,21 +113,7 @@ export default {
         })
 
         onMounted(() => {
-            //testProcess()
         })
-
-        const testProcess = async () => {
-            const fetchStart = new Date()
-
-            // TODO TEST
-
-            const fetchEnd = new Date().getTime() - fetchStart.getTime()
-            if (fetchEnd < 3000) {
-                setTimeout(await testProcess, 3000 - fetchEnd)
-            } else {
-                setTimeout(await testProcess, 0)
-            }
-        }
 
         const getFile = () => {
             const allowedExtensions = ['log', 'txt'];
