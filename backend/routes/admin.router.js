@@ -50,6 +50,8 @@ module.exports = function (app) {
             }
         });
 
+        app.get
+
         app.post('/admin/get_user_log', [verifyToken, findRoleById, isAdmin], async(req, res, next) => {
             try {
                 if(req.body.user_id) {
@@ -91,8 +93,14 @@ module.exports = function (app) {
 }
 
 const checkExistUserId = async (db, user_id) => {
-    // Username
-    let findUserById = (await db.query('SELECT user_id, user_role FROM users WHERE user_id = $1 LIMIT 1', [user_id])).rows[0];
+    let findUserById = undefined;
+    try {
+        findUserById = (await db.query('SELECT user_id, user_role FROM kiapi_user.users WHERE user_id = $1 LIMIT 1', [user_id])).rows[0];
+    } catch (err) {
+        console.log(err);
+        res.status(500).send({ message: 'error: server' });
+    }
+    
     if (findUserById) {
         return true;
     } else {
