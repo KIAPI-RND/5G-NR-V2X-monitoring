@@ -16,6 +16,9 @@ export const api = {
     getters: {
         getFetchTime: (state) => {
             return state.fetchTime;
-        }
+        },
+        getDrivers: (state) => {
+            return ApiService.getDrivers()
+        },
     }
 }
