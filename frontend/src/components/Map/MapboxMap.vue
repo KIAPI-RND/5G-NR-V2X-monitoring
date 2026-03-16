@@ -62,7 +62,6 @@ export default {
             if (mapVars.map) {
                 if (mapVars.map.getLayer(a2geojson.name + '_layer')) {
                     mapVars.map.removeLayer(a2geojson.name + '_layer')
-                    mapVars.map.removeLayer(a2geojson.name + '_road_layer')
                     mapVars.map.removeSource(a2geojson.name + '_source')
                 }
 
