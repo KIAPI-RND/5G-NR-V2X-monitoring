@@ -3,6 +3,9 @@ const mapVars = {
 }
 
 export const map = {
+    state: () => ({
+        driverName: undefined
+    }),
     getters: {
         getMap: (state) => () => {
             return mapVars
