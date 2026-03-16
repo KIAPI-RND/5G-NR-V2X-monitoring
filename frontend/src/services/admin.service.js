@@ -20,14 +20,6 @@ class adminService {
             headers: authHeader()
         })
     }
-    deleteUser(user_id) {
-        return axios.
-        post(API_URL + 'delete_user',{
-            user_id: user_id
-        },{
-            headers: authHeader()
-        })
-    }
     getUserLog(user_id) {
         return axios.
         post(API_URL + 'get_user_log',{
