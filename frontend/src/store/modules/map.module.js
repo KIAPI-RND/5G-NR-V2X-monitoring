@@ -12,6 +12,8 @@ export const map = {
         },
     },
     mutations: {
-
+        setDriverName(state, driverName) {
+            state.driverName = driverName
+        }
     }
 }
