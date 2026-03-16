@@ -145,8 +145,8 @@ export default {
                                 '323',
                                 '324',
                             ],
-                            ['literal', 2],
-                            ['literal', 1],
+                            ['literal', 5],
+                            ['literal', 3],
                         ],
                     }
                 })
