@@ -33,14 +33,18 @@ export default {
             );
         }
 
-        return { state, store, logout }
+        function goToLoginPage() {
+            router.push('/')
+        }
+
+        return { state, store, logout, goToLoginPage }
     }
 }
 </script>
 
 <template>
     <div class="btn-4">
-        <label class="octo-label">
+        <label class="octo-label" @click="goToLoginPage">
             <a>
                 CAN TEST
             </a>
