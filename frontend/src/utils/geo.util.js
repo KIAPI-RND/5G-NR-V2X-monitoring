@@ -10,6 +10,7 @@ export function calculate_heading(lat1, lon1, lat2, lon2) {
   let heading_rad = Math.atan2(y, x)
 
   let heading_deg = radiansToDegrees(heading_rad)
+  heading_deg = (heading_deg + 360) % 360
 
   return heading_deg
 }
