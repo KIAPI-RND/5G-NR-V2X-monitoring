@@ -5,6 +5,7 @@
         <v-container fluid id="container">
             <div class="map">
                 <MapboxMap />
+                <CanDataList />
             </div>
         </v-container>
     </div>
@@ -15,6 +16,7 @@ import { onMounted, reactive } from '@vue/runtime-core'
 import { useStore } from 'vuex'
 import HeaderView from '@/components/Common/HeaderView.vue'
 import MapboxMap from '@/components/Map/MapboxMap.vue'
+import CanDataList from '@/components/CAN/CanDataList.vue'
 
 export default {
     components: {
