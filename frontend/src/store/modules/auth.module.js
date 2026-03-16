@@ -31,6 +31,9 @@ export const auth = {
         getUser: (state) => {
             return state.user;
         },
+        getUserRole: (state) => {
+            return state.user_role;
+        },
         getLoggedin: (state) => {
             if(state.user.accessToken)
                 return true;
