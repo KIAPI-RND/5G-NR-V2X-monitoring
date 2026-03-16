@@ -71,6 +71,22 @@ export default {
                     data: a2geojson,
                     generateId: true
                 })
+
+                mapVars.map.addLayer({
+                    id: a2geojson.name + '_layer',
+                    type: 'line',
+                    source: a2geojson.name + '_source',
+                    paint: {
+                        'line-color': '#9999ff',
+                        'line-width': [
+                            'case',
+                            ['boolean', ['feature-state', 'highlight'], false],
+                            20,
+                            0,
+                        ],
+                        'line-dasharray': [0, 4, 3]
+                    },
+                })
             }
         }
 
