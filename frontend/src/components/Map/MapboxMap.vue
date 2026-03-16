@@ -59,7 +59,19 @@ export default {
         })
 
         const DrawA2Link = (a2geojson) => {
+            if (mapVars.map) {
+                if (mapVars.map.getLayer(a2geojson.name + '_layer')) {
+                    mapVars.map.removeLayer(a2geojson.name + '_layer')
+                    mapVars.map.removeLayer(a2geojson.name + '_road_layer')
+                    mapVars.map.removeSource(a2geojson.name + '_source')
+                }
 
+                mapVars.map.addSource(a2geojson.name + '_source', {
+                    type: 'geojson',
+                    data: a2geojson,
+                    generateId: true
+                })
+            }
         }
 
         const DrawB2SURFACELINE = (b2geojson) => {
