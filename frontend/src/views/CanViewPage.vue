@@ -24,11 +24,11 @@ export default {
     setup() {
         const store = useStore()
         const state = reactive({
-
+            isMount: false
         })
 
         onMounted(() => {
-
+            state.isMount = true
         })
 
         return { store, state }
