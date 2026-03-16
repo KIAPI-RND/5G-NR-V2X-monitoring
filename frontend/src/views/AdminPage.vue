@@ -45,9 +45,10 @@ export default {
             store.getters.getUsers.then(
                 response => {
                     state.users = response.data.userList; 
-                }/*, 
+                }, 
                 error => {
-                }*/
+                    console.log(error);
+                }
             );
         }
 
