@@ -25,7 +25,7 @@ export default {
         })
 
         onMounted(() => {
-            mapboxgl.accessToken = 'pk.eyJ1Ijoia2tkc2VvIiwiYSI6ImNtMzZ2ejdwODA5emwycW9sdDR6aHhnODUifQ.loCjM4YChROp0E8YZwmUng'
+            mapboxgl.accessToken = 'userToken'
 
             mapVars = store.getters['getMap']()
             mapVars.map = new mapboxgl.Map({
