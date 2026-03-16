@@ -53,6 +53,8 @@ export default {
                     'star-intensity': 0,
                 })
 
+                const PG_A2 = require('@/assets/hdmap/pg_a2_link_240805.geojson')
+                DrawA2Link(PG_A2)
                 const PG_B2 = require('@/assets/hdmap/pg_b2_surfacelinemark_240805.geojson')
                 DrawB2SURFACELINE(PG_B2)
             })
