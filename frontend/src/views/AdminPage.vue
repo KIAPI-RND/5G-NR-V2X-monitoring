@@ -84,19 +84,6 @@ export default {
             
         }
 
-        // const deleteUser = () => {
-        //     store.dispatch('deleteUser', state.deleteDialog.delete_id).then(
-        //         () => {
-        //             state.deleteDialog.delete_id = null;
-        //             state.deleteDialog.show = false;
-        //             getUsers();
-        //         }, 
-        //         error => {
-        //             getUsers();
-        //         }
-        //     ); 
-        // }
-
         //사용자 로그 뷰
         const detailUser = (user_id) => {
             store.getters.getUserLog(user_id).then(
